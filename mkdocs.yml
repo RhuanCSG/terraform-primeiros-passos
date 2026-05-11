@@ -1,0 +1,119 @@
+site_name: Primeiros passos Terraform
+site_description: Roadmap de aprendizado Terraform do zero ao nível profissional
+site_author: RhuanCSG
+site_url: https://rhuancsg.github.io/terraform-primeiros-passos/
+repo_name: terraform-primeiros-passos
+repo_url: https://github.com/RhuanCSG/terraform-primeiros-passos
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: pt-BR
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Alternar para modo escuro
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Alternar para modo claro
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - toc.follow
+    - toc.integrate
+
+plugins:
+  - search:
+      lang:
+        - pt
+        - en
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - def_list
+  - footnotes
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/RhuanCSG
+  analytics:
+    feedback:
+      title: Esta página foi útil?
+      ratings:
+        - icon: material/thumb-up-outline
+          name: Sim
+          data: 1
+          note: Obrigado pelo feedback!
+        - icon: material/thumb-down-outline
+          name: Não
+          data: 0
+          note: Obrigado pelo feedback!
+
+nav:
+  - Início: index.md
+  - Roadmap:
+    - Visão Geral: roadmap.md
+    - "00. Setup":
+      - Visão Geral: fase-0-setup/index.md
+    - "01. Fundamentos":
+      - Visão Geral: fase-1-fundamentos/index.md
+      - Sintaxe HCL: fase-1-fundamentos/hcl-syntax.md
+      - Providers: fase-1-fundamentos/providers.md
+      - Ciclo de Vida: fase-1-fundamentos/lifecycle.md
+    - "02. Estado":
+      - Visão Geral: fase-2-state/index.md
+      - Estado Local: fase-2-state/local-state.md
+      - Estado Remoto: fase-2-state/remote-state.md
+    - "03. Variáveis":
+      - Visão Geral: fase-3-variaveis/index.md
+      - Variables: fase-3-variaveis/variables.md
+      - Outputs: fase-3-variaveis/outputs.md
+      - Locals: fase-3-variaveis/locals.md
+    - "04. Módulos":
+      - Visão Geral: fase-4-modulos/index.md
+      - Criando Módulos: fase-4-modulos/criando-modulos.md
+      - Terraform Registry: fase-4-modulos/registry.md
+    - "05. Produção":
+      - Visão Geral: fase-5-producao/index.md
+      - Workspaces: fase-5-producao/workspaces.md
+      - Segurança: fase-5-producao/security.md
+      - Estrutura Profissional: fase-5-producao/estrutura-pastas.md
